@@ -113,7 +113,7 @@
         import mx.managers.DragManager;
         import mx.core.DragSource;
         import mx.controls.Alert;
-        import com.mindspace.l10n.events.LocaleEvent;
+        import org.babelfx.events.LocaleEvent;
 
         public var theMap:Map;
         public var theController:EditController;
@@ -133,9 +133,11 @@
 		private function startInit():void {
             /* For reasons that I don't yet understand, the en_US locale is the default and doesn't work at all. */
             /* Change this to another locale (e.g. fr_FR) to see the differences. */
-            if (loaderInfo.parameters['locale']) {
+/*            if (loaderInfo.parameters['locale']) {
               dispatchEvent(new LocaleEvent(LocaleEvent.LOAD_LOCALE,loaderInfo.parameters['locale']));
             }
+*/
+              dispatchEvent(new LocaleEvent(LocaleEvent.LOAD_LOCALE,"ja_JP"));
 
 			// Load font and don't do anything until that's done
 			var loader:Loader = new Loader();
