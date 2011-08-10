@@ -54,12 +54,16 @@
             enabled="{MainUndoStack.getGlobalStack().canRedo()}"
             toolTip="{MainUndoStack.getGlobalStack().getRedoDescription() ? 'Redo '+MainUndoStack.getGlobalStack().getRedoDescription() : 'Redo last action'}" />
         <mx:Spacer width="100%"/>
+<mx:Button 		
+        id="btnGoto" 			
+        label="Go to Next Locale"   
+        click="resourceManager.localeChain = ['ja_JP','en_US'];"   />
         <mx:Button id="helpButton" label="Help" click="new HelpDialog().init();" styleName="appBarButton" />
         <mx:Button id="optionsButton" label="Options" click="new OptionsDialog().init();" styleName="appBarButton" />
         <mx:Button label="Save" icon="@Embed('embedded/upload.svg')" disabledIcon="@Embed('embedded/upload_disabled.svg')" styleName="appBarButton"
 			click="SaveManager.saveChanges(theMap.editableLayer.connection);" id="saveButton" enabled="false"/>
     </mx:ApplicationControlBar>
-    
+
     <mx:HDividedBox width="100%" height="100%">
 
 	  <!-- Tag viewer -->

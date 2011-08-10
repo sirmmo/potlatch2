@@ -8,6 +8,7 @@
   <mx:Script>
     <![CDATA[
       import org.babelfx.commands.ExternalLocaleCommand;
+      import org.babelfx.events.LocaleEvent;
       import mx.resources.ResourceManager;
       import mx.resources.IResourceManager;
 
