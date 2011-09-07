@@ -54,10 +54,10 @@
             enabled="{MainUndoStack.getGlobalStack().canRedo()}"
             toolTip="{MainUndoStack.getGlobalStack().getRedoDescription() ? 'Redo '+MainUndoStack.getGlobalStack().getRedoDescription() : 'Redo last action'}" />
         <mx:Spacer width="100%"/>
-<mx:Button 		
+    <mx:Button 		
         id="btnGoto" 			
-        label="Go to Next Locale"   
-        click="resourceManager.localeChain = ['ja_JP','en_US'];"   />
+        label="日本語表示"   
+        click="resourceManager.localeChain = ['de_DE', 'en_GB', 'fr_FR', 'ja_JP', 'pl_PL','en_US'];"   />
         <mx:Button id="helpButton" label="Help" click="new HelpDialog().init();" styleName="appBarButton" />
         <mx:Button id="optionsButton" label="Options" click="new OptionsDialog().init();" styleName="appBarButton" />
         <mx:Button label="Save" icon="@Embed('embedded/upload.svg')" disabledIcon="@Embed('embedded/upload_disabled.svg')" styleName="appBarButton"
@@ -137,16 +137,14 @@
 		private function startInit():void {
             /* For reasons that I don't yet understand, the en_US locale is the default and doesn't work at all. */
             /* Change this to another locale (e.g. fr_FR) to see the differences. */
-/*            if (loaderInfo.parameters['locale']) {
-              dispatchEvent(new LocaleEvent(LocaleEvent.LOAD_LOCALE,loaderInfo.parameters['locale']));
-            }
-*/
-              dispatchEvent(new LocaleEvent(LocaleEvent.LOAD_LOCALE,"ja_JP"));
 
 			// Load font and don't do anything until that's done
 			var loader:Loader = new Loader();
 			loader.contentLoaderInfo.addEventListener(Event.COMPLETE, continueInit);
 			loader.load(new URLRequest("FontLibrary.swf"));
+
+           dispatchEvent(new LocaleEvent(LocaleEvent.LOAD_LOCALE,"ja_JP"));
+           
 		}
 		
 		private function continueInit(r:Event):void {

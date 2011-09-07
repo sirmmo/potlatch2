@@ -41,6 +41,13 @@
   <ResourceInjector bundleName="help_dialog" target="{HelpDialog}">
     <ResourceSetter property="gettingStarted.text" key="help.gettingStarted" />
     <ResourceSetter property="welcome.label" key="help.welcome" />
+    <ResourceSetter property="whyOpenStreetMap.htmlText" key="help.why_openstreetmap" />
+    <ResourceSetter property="activeMembers.htmlText" key="help.activeMembers" />
+    <ResourceSetter property="newMembersText.htmlText" key="help.newMembers" />   
+    <ResourceSetter property="introText.htmlText" key="help.introText" parameters="that"/> <!-- wanna call loaderInfo.parameters["site_name"] or getIntroText() -->
+    <ResourceSetter property="Introduction.label" key="help.introduction" />
+    <ResourceSetter property="Controls.label" key="help.controls" />
+    <ResourceSetter property="interfaceControls.label" key="help.interfaceControls"/>
   </ResourceInjector>
 
   <ResourceInjector bundleName="p2_main" target="{potlatch2}">
@@ -52,6 +59,8 @@
     <ResourceSetter property="optionsButton.label" key="main.options" />
     <ResourceSetter property="saveButton.label" key="main.save" />
     <ResourceSetter property="gpsButton.label" key="main.gps_data" />
+    <ResourceSetter property="myTrack.label" key="main.my_track" />
+    <ResourceSetter property="clearGps.label" key="main.clear_gps" />
   </ResourceInjector>
 
   <ResourceInjector bundleName="p2_main" target="{TagViewer}">
