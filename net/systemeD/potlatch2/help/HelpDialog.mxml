@@ -197,10 +197,10 @@
       <mx:Grid width="100%">
         <mx:GridRow width="100%">
           <mx:GridItem>
-            <mx:Label width="100%" text="Background" styleName="helpHeaderText" />
+            <mx:Label id="background" width="100%" text="Background" styleName="helpHeaderText" />
           </mx:GridItem>
           <mx:GridItem width="100%">
-            <mx:Text condenseWhite="true" width="100%">
+            <mx:Text id="mapBackground" condenseWhite="true" width="100%">
               <mx:htmlText>
                 <![CDATA[
                   <p>Choose your map background from one of the items in the list or add your own vector file.</p>
@@ -211,10 +211,10 @@
         </mx:GridRow>
         <mx:GridRow width="100%">
           <mx:GridItem>
-            <mx:Label width="100%" text="Map Style" styleName="helpHeaderText" />
+            <mx:Label id="mapStyle" width="100%" text="Map Style" styleName="helpHeaderText" />
           </mx:GridItem>
           <mx:GridItem width="100%">
-            <mx:Text condenseWhite="true" width="100%">
+            <mx:Text id="colourStyle" condenseWhite="true" width="100%">
               <mx:htmlText>
                 <![CDATA[
                   <p>Choose the style in which you wish to view the map. Colours and overall style vary and also includes other options like wireframe.</p>
@@ -225,10 +225,10 @@
         </mx:GridRow>
         <mx:GridRow width="100%">
           <mx:GridItem>
-            <mx:Label width="100%" text="GPS" styleName="helpHeaderText" />
+            <mx:Label id="gps" width="100%" text="GPS" styleName="helpHeaderText" />
           </mx:GridItem>
           <mx:GridItem width="100%">
-            <mx:Text condenseWhite="true" width="100%">
+            <mx:Text id="createOsmMap" condenseWhite="true" width="100%">
               <mx:htmlText>
                 <![CDATA[
                   <p>Create OSM map data using other people's GPS tracks as a background</p>
@@ -239,10 +239,10 @@
         </mx:GridRow>
         <mx:GridRow width="100%">
           <mx:GridItem>
-            <mx:Label width="100%" text="MyGPX" styleName="helpHeaderText" />
+            <mx:Label id="myGpx" width="100%" text="MyGPX" styleName="helpHeaderText" />
           </mx:GridItem>
           <mx:GridItem width="100%">
-            <mx:Text condenseWhite="true" width="100%">
+            <mx:Text id="displayGps" condenseWhite="true" width="100%">
               <mx:htmlText>
                 <![CDATA[
                   <p>Display GPS traces that you've previously uploaded to OpenStreetMap.</p>
@@ -253,10 +253,10 @@
         </mx:GridRow>
         <mx:GridRow width="100%">
           <mx:GridItem>
-            <mx:Label width="100%" text="Undo / Redo" styleName="helpHeaderText" />
+            <mx:Label id="undoRedo" width="100%" text="Undo / Redo" styleName="helpHeaderText" />
           </mx:GridItem>
           <mx:GridItem width="100%">
-            <mx:Text condenseWhite="true" width="100%">
+            <mx:Text id="madeMistake" condenseWhite="true" width="100%">
               <mx:htmlText>
                 <![CDATA[
                   <p>Made a mistake? Just hit undo and/or redo to correct your edits.</p>
@@ -267,10 +267,10 @@
         </mx:GridRow>
         <mx:GridRow width="100%">
           <mx:GridItem>
-            <mx:Label width="100%" text="Help" styleName="helpHeaderText" />
+            <mx:Label id="help" width="100%" text="Help" styleName="helpHeaderText" />
           </mx:GridItem>
           <mx:GridItem width="100%">
-            <mx:Text condenseWhite="true" width="100%">
+            <mx:Text id="guideInfomation" condenseWhite="true" width="100%">
               <mx:htmlText>
                 <![CDATA[
                   <p>Brings up this guide in case you need any information as you begin editing.</p>
