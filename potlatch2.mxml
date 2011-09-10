@@ -57,7 +57,7 @@
     <mx:Button 		
         id="btnGoto" 			
         label="日本語表示"   
-        click="resourceManager.localeChain = ['de_DE', 'en_GB', 'fr_FR', 'ja_JP', 'pl_PL','en_US'];"   />
+        click="resourceManager.localeChain = ['de_DE', 'en_GB', 'fr_FR', 'id_ID', 'ja_JP', 'pl_PL','en_US'];"   />
         <mx:Button id="helpButton" label="Help" click="new HelpDialog().init();" styleName="appBarButton" />
         <mx:Button id="optionsButton" label="Options" click="new OptionsDialog().init();" styleName="appBarButton" />
         <mx:Button label="Save" icon="@Embed('embedded/upload.svg')" disabledIcon="@Embed('embedded/upload_disabled.svg')" styleName="appBarButton"
