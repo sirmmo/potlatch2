@@ -15,6 +15,8 @@
       import net.systemeD.potlatch2.help.HelpDialog;
       import net.systemeD.potlatch2.TagViewer;
       import net.systemeD.potlatch2.Toolbox;
+      import net.systemeD.potlatch2.save.OAuthPanel;
+      import net.systemeD.potlatch2.save.SaveDialog;
 
       private function onLocaleChanged(event:Event):void {
           var rMngr : IResourceManager = ResourceManager.getInstance();
@@ -54,8 +56,26 @@
     <ResourceSetter property="colourStyle.htmlText" key="help.colourStyle"/>
     <ResourceSetter property="gps.label" key="help.gps"/>
     <ResourceSetter property="createOsmMap.htmlText" key="help.createOsmMap"/>
-    
-      </ResourceInjector>
+    <ResourceSetter property="undoRedo.label" key="help.undoRedo" />
+    <ResourceSetter property="madeMistake.htmlText" key="help.madeMistake" />
+    <ResourceSetter property="help.label" key="help.help" />
+    <ResourceSetter property="guideInfomation.htmlText" key="help.guideInfomation" /> 
+    <ResourceSetter property="save.label" key="help.save" />  
+ <!--   <ResourceSetter property="saveText.htmlText" key="help.saveText" />    -->
+    <ResourceSetter property="addingFeatures.label" key="help.addingFeatures" />  
+    <ResourceSetter property="addingFeaturesText.htmlText" key="help.addingFeaturesText" />
+    <ResourceSetter property="editBeg.label" key="help.editBeg" />
+    <ResourceSetter property="editingFeatures.label" key="help.editingFeatures" />
+    <ResourceSetter property="editingFeaturesText.htmlText" key="help.editingFeaturesText" />
+    <ResourceSetter property="editAdv.label" key="help.editAdv" />
+    <ResourceSetter property="editingFeaturesAdv.label" key="help.editingFeaturesAdv"/>
+    <ResourceSetter property="editingFeaturesAdvText.htmlText" key="help.editingFeaturesAdvText"/>
+    <ResourceSetter property="tag.label" key="help.tag" />
+    <ResourceSetter property="taggingFeatures.label" key="help.taggingFeatures" />
+    <ResourceSetter property="taggingFeaturesText.htmlText" key="help.taggingFeaturesText" />
+    <ResourceSetter property="shortcuts.label" key="help.shortcuts" />
+    <ResourceSetter property="keyboardShortcuts.label" key="help.keyboardShortcuts" />
+  </ResourceInjector>
 
   <ResourceInjector bundleName="p2_main" target="{potlatch2}">
     <ResourceSetter property="bgButton.label" key="main.background" />
@@ -68,7 +88,14 @@
     <ResourceSetter property="gpsButton.label" key="main.gps_data" />
     <ResourceSetter property="myTrack.label" key="main.my_track" />
     <ResourceSetter property="clearGps.label" key="main.clear_gps" />
-
+  </ResourceInjector>
+  
+  <ResourceInjector bundleName="oauth_panel" target="{OAuthPanel}" />
+    <ResourceSetter property="askClickLink.text" key="oauth.askClickLink" />
+    <ResourceSetter property="authorized.text" key="oauth.authorized" />
+    <ResourceSetter property="deniedLabel.text" key="oauth.deniedLabel" />
+    <ResourceSetter property="permFail.htmlText" key="oauth.permFail" />
+    <ResourceSetter property="tempFail.text" key="oauth.tempFail" />
   </ResourceInjector>
 
   <ResourceInjector bundleName="p2_main" target="{TagViewer}">
