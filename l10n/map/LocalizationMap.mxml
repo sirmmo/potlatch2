@@ -13,11 +13,17 @@
       import mx.resources.IResourceManager;
 
       import net.systemeD.potlatch2.help.HelpDialog;
+
       import net.systemeD.potlatch2.TagViewer;
       import net.systemeD.potlatch2.Toolbox;
+      import net.systemeD.potlatch2.StyleSelector;
+      import net.systemeD.potlatch2.BackgroundSelector;
+
       import net.systemeD.potlatch2.save.OAuthPanel;
       import net.systemeD.potlatch2.save.SaveDialog;
 
+      import net.systemeD.potlatch2.options.OptionsDialog;
+      
       private function onLocaleChanged(event:Event):void {
           var rMngr : IResourceManager = ResourceManager.getInstance();
           var sri : ResourceInjector = event.target as ResourceInjector;
@@ -90,12 +96,15 @@
     <ResourceSetter property="clearGps.label" key="main.clear_gps" />
   </ResourceInjector>
   
-  <ResourceInjector bundleName="oauth_panel" target="{OAuthPanel}" />
-    <ResourceSetter property="askClickLink.text" key="oauth.askClickLink" />
+  <ResourceInjector bundleName="p2_main" target="{OAuthPanel}">
+    <ResourceSetter property="gotLinkBox.text" key="oauth.gotLinkBox" />
     <ResourceSetter property="authorized.text" key="oauth.authorized" />
     <ResourceSetter property="deniedLabel.text" key="oauth.deniedLabel" />
+    <ResourceSetter property="rememberMe.label" key="oauth.rememberMe" />
     <ResourceSetter property="permFail.htmlText" key="oauth.permFail" />
     <ResourceSetter property="tempFail.text" key="oauth.tempFail" />
+    <ResourceSetter property="tryAccessButton.label" key="oauth.tryAccessButton" />
+    <ResourceSetter property="cancelButton.label" key="oauth.cancelButton" />
   </ResourceInjector>
 
   <ResourceInjector bundleName="p2_main" target="{TagViewer}">
@@ -116,4 +125,25 @@
     <ResourceSetter property="parralleliseButton.toolTip" key="toolbox.create_parrallel_way" />
   </ResourceInjector>
 
+  <ResourceInjector bundleName="p2_main" target="{StyleSelector}">
+    <ResourceSetter property="editButton.label" key="styleSelector.editButton" />
+  </ResourceInjector>
+
+  <ResourceInjector bundleName="p2_main" target="{BackgroundSelector}">
+    <ResourceSetter property="dim.label" key="backgroundSelector.dim" />
+    <ResourceSetter property="sharpen.label" key="backgroundSelector.sharpen" />
+    <ResourceSetter property="editButton.label" key="backgroundSelector.editButton" />
+    <ResourceSetter property="vectorButton.label" key="backgroundSelector.vectorButton" />
+  </ResourceInjector>
+
+  <ResourceInjector bundleName="p2_main" target="{SaveDialog}">
+    <ResourceSetter property="editDescription.text" key="save.editDescription" />
+    <ResourceSetter property="commentLabel.label" key="save.commentLabel" />
+  </ResourceInjector>
+
+  <ResourceInjector bundleName="p2_main" target="{OptionsDialog}">
+    <ResourceSetter property="tbcheck.label" key="options.tbcheck" />
+    <ResourceSetter property="cursorcheck.label" key="options.cursorcheck" />
+    <ResourceSetter property="ok.label" key="option.ok" />
+  </ResourceInjector>
 </LocaleMap>
