@@ -129,10 +129,6 @@
   </mx:Script>
   <mx:TabNavigator id="helpTN" width="100%" height="100%" styleName="helpTN" creationPolicy="all">
     <mx:VBox label="Welcome" id="welcome" width="100%" height="100%">
-     <mx:Button 		
-        id="btnLangHelp" 			
-        label="日本語表示"   
-        click="resourceManager.localeChain = ['de_DE', 'en_GB', 'fr_FR', 'id_ID', 'ja_JP', 'pl_PL','en_US'];"   />
       <mx:Grid width="100%"><!-- prepare for a column of icons, at some point -->
         <mx:GridRow width="100%">
           <mx:GridItem width="100%">
